@@ -1,0 +1,341 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    scroll-behavior: smooth;/*scroll suave cuando das click en el enlace*/
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+.header{
+    height:100vh;
+    background-image: linear-gradient(to top, rgba(161, 140, 209, 0.404) 0%, rgba(251, 193, 234, 0.404) 100%), url(../img/woman.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.head{
+    text-align: center;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.hamburger{
+    position: fixed;
+    /* z-index: 10; */
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+.menu_navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25vw;
+    height: 80%;
+    background-image: linear-gradient(135deg, #fb704799 0%, #664aca 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+.spread{
+    transform: translate(0);
+}
+.menu_navegacion a{
+    color: #fff;
+    text-decoration: none;
+}
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+/*Nuestro Servicio*/
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color: #d77777c2;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+.contenedor_servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contenedor_servicio img{
+    width: 40%;
+}
+.servicio_checklist{
+    width: 45%;
+}
+.service{
+    margin-bottom: 20px;
+}
+.n-service{
+    margin-bottom: 7px;
+    color: #d77777c2;
+}
+.number{
+    display: inline-block;/*para darle un width y un height*/
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    width: 30PX;
+    height: 30PX;
+    color: #FFF;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-right: 5px;
+    line-height: 30px;/*del tamaño del height para que lo centre verticalmente*/
+}
+.parrafo_servicio{
+    font-weight: 300;
+}
+
+/*Galeria*/
+.gallery{
+    background: #f2f2f2;
+}
+.contenedor_galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.img_galeria{
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow:0 0 6px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+.imagen_light{
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(110%);
+    transition: transform .2s ease-in-out;
+}
+.show{
+    transform: translate(0);
+}
+.agregar_imagen{
+    object-fit: cover;
+    width: 60%;
+    border-radius: 15px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+.showImage{
+    transform: scale(1);
+}
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/*Expertos*/
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cont_expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.experte_img{
+    width: 80%;
+    display: block;
+    margin: auto;/*para qeu cewntre a los lados*/
+}
+.n-expert{
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #d77777c2;
+}
+
+/*Footer*/
+.footer{
+    background: #d77777c2;
+    padding-bottom: 0.1px;
+}
+.footer-content{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.contact-us{
+    width: 40%;
+    color: #fff;
+}
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+.brand+p{ /*selecciono el hermano de brand que es p*/
+    font-weight: 300;
+}
+.socialmedia{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center
+}
+.social-media-icon:hover{
+    background: #fff;
+    color: #d77777c2;
+}
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+
+/*RESPONSIVE-DESIGN*/
+
+@media screen and (max-width:800px){
+    .menu_navegacion{
+        width: 30vw; 
+    }
+    .titulo{
+        font-size: 40px;
+    }
+    .contenedor_servicio img{
+        width: 80%;
+    }
+    .servicio_checklist{
+        width: 80%;
+    }
+    .service {
+        margin-bottom: 30px;
+    }
+    .agregar_imagen{
+        width: 80%;
+    }
+    .img_galeria{
+        width: 45%;
+    }
+    .cont_expert{
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    .footer-content{
+        justify-content: center;
+    }
+    .contact-us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    .socialmedia{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+    .social-media-icon{
+        margin-left: 0;
+    }
+    .socialmedia i{
+        margin-left: 0;
+    }
+    .brand{
+        font-weight: 300;
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .menu_navegacion{
+        width: 45%;
+    }
+    .agregar_imagen{
+        width: 90%;
+    }
+    .hamburger{
+        top: 20px;
+        right: 20px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .subtitulo{
+        font-size: 30px;
+    }
+    .copy{
+        font-size: 20px;
+    }
+    .img_galeria{
+        width: 90%;
+    }
+    .contact-us{
+        width: 90%;
+    }
+    .socialmedia{
+        width: 100%;
+    }
+
+}
